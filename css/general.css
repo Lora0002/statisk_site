@@ -1,0 +1,282 @@
+/*-------------- RESET ----------------*/
+* { /* Nulstiller browserens standard-margen og padding */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Gør bredde/højde nemmere at regne med */
+}
+/* Sikrer at billeder aldrig bliver større end deres container */
+img {
+    max-width: 100%;
+    height: auto;    /* Bevarer billedets proportioner */
+}
+
+
+/*-------------- VARIABLER ----------------*/
+/* CSS-variabler defineres i html, så de kan bruges globalt */
+html {
+  /* Colours */
+  --bg-base: #E4CDB0;
+  --red-primary: #3f1D0E;
+  --grey-primary: #343434;
+  --white-primary: #FFFFFF;
+  --black-primary: #000000;
+  
+
+  /* Fonts */
+  --font-h1-var1: "Bodoni Moda", serif;
+    --font-h1-var2: "Bodoni Moda", serif;
+  --font-p-var1: "Hanken Grotesk", sans-serif;
+}
+
+/*-------------- TEKST ----------------*/
+.h1-var1 {
+  font-family: var(--font-h1-var1);
+  font-size: 150px;
+  font-weight: 400;
+  line-height: 100%;
+
+  font-style: normal;
+}
+
+.h1-var2 {
+  font-family: var(--font-h1-var2);
+  font-size: 240px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+
+p {
+
+  font-family: var(--font-p-var1);
+  text-align: justify;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+ 
+
+}
+/* Responsivt tekst-layout til mobil */
+@media (max-width: 800px) {
+  .h1-var1 {
+    font-size: 80px;
+  }
+  .h1-var2 {
+    font-size: 100px;
+  }
+ 
+  p {
+    font-size: 18px;
+  }
+}
+
+/*---------------- BODY ----------------*/
+body {
+  background-color: var(--bg-base);
+}
+
+
+/*---------------- HEADER ----------------*/
+/* Sticky header, som bliver siddende i toppen */
+header {
+  position: sticky;
+  z-index: 100;  /* Ligger over andet indhold */
+  top: 0;
+  height: 13vh;
+  display: flex;
+  justify-content: space-between; /* Logo til venstre, menu til højre */
+  align-items: center;
+  padding: 15px 20px;
+  background-color: var(--bg-base);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.01);
+}
+/* Wrapper til logo */
+.logo-wrapper {
+  width: 110px;
+  height: auto;
+  margin-left: 10px;
+}
+
+/* Farver SVG-logoet rødt */
+.logo-wrapper svg * {
+  fill: var(--red-primary);
+}
+/* Navigation container */
+nav {
+  display: flex;
+  align-items: center;
+}
+/* Menu som vandret liste */
+.menu {
+  display: flex;
+  list-style: none; /* Fjerner bullets */
+  margin: 0;
+  padding: 0;
+}
+
+/* Afstand mellem menupunkter */
+.menu li {
+  margin-right: 20px;
+}
+/* Fjerner margin på sidste punkt */
+.menu li:last-child {
+  margin-right: 0;
+}
+
+/* Styling af links i menuen */
+.menu a {
+  font-family: var(--font-h2-var2);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  display: block;
+  padding: 10px;
+  color: var(--red-primary);
+  text-decoration: none;
+  transition: color 0.3s; /* Blød hover-effekt */
+  text-align: end;
+}
+/* Hover-effekt på menu-links */
+.menu a:hover {
+  color: var(--red-primary);
+  font-style: italic;
+}
+/* Burger-menu ikon */
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+/* Streger i burger-menu */
+.burger .line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--red-primary);
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;  /* Skjult på desktop */
+}
+
+/*---------------- MOBIL MENU ----------------*/
+@media screen and (max-width: 800px) {
+  /* Skjul almindelig menu */ 
+    .menu {
+    display: none;
+  }
+    /* Vis burger-menu */
+  .burger {
+    display: block;
+    background-color: transparent;
+    border: 0;
+  }
+   /* Animation: burger bliver til kryds */
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+ /* Dropdown-menu når nav er aktiv */
+  nav.active .menu {
+    display: block;
+    background-color: var(--bg-base);
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+
+/*---------------- FOOTER ----------------*/
+
+.site-footer {
+  background: var(--grey-primary);
+  color: var(--white-primary);
+  padding: 10rem 2rem;
+  text-align: center;
+  height:710px ;
+}
+
+.footer-title {
+  font-family: var(--font-h1-var2);
+  font-size: clamp(36px, 6vw, 72px);  /* Responsiv størrelse */
+  margin-bottom: 2.5rem;
+  letter-spacing: 1.5px;
+}
+/* Grid-layout i footer */
+.footer-grid {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+/* Kolonner i footer */
+.contact-col {
+  text-align: left;
+  min-width: 220px;
+}
+/* Små overskrifter i footer */
+.label {
+  font-family: var(--font-h1-var2);
+  font-style: italic;
+  color: var(--white-primary);
+  margin-bottom: 1rem;
+}
+/* Pille-formet knap/link */
+.pill {
+  display: inline-block;
+  background: var(--bg-base);
+  color: var(--black-primary);
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+
+  font-family: var(--font-h1-var2);
+  box-shadow: inset 0 -3px rgba(0,0,0,0.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+/* Hover-effekt på pill */
+.pill:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  color: var(--red-primary);
+ 
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+  .footer-grid {
+    flex-direction: column;  /* Kolonner bliver til rækker */
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  .contact-col { 
+    text-align: center; 
+    min-width: auto; }
+}
+
