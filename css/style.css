@@ -370,27 +370,6 @@ font-size: 16px;
     padding: 0 !important;
   }
 }
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-main {
-    margin: 0 auto;
-    width: 900px;
-    padding: 1rem;
-}
-
-/*---------------- BODY ----------------*/
-body {
-  background-color: var(--bg-base);
-}
 
 
 /*---------------- HEADER ----------------*/
