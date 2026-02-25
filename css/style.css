@@ -370,5 +370,377 @@ font-size: 16px;
     padding: 0 !important;
   }
 }
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+main {
+    margin: 0 auto;
+    width: 900px;
+    padding: 1rem;
+}
+
+/*---------------- BODY ----------------*/
+body {
+  background-color: var(--bg-base);
+}
+
+
+/*---------------- HEADER ----------------*/
+/* Sticky header, som bliver siddende i toppen */
+header {
+  position: sticky;
+  z-index: 100;  /* Ligger over andet indhold */
+  top: 0;
+  height: 13vh;
+  display: flex;
+  justify-content: space-between; /* Logo til venstre, menu til højre */
+  align-items: center;
+  padding: 15px 20px;
+  background-color: var(--bg-base);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.01);
+}
+/* Wrapper til logo */
+.logo-wrapper {
+  width: 110px;
+  height: auto;
+  margin-left: 10px;
+}
+
+/* Farver SVG-logoet rødt */
+.logo-wrapper svg * {
+  fill: var(--red-primary);
+}
+/* Navigation container */
+nav {
+  display: flex;
+  align-items: center;
+}
+/* Menu som vandret liste */
+.menu {
+  display: flex;
+  list-style: none; /* Fjerner bullets */
+  margin: 0;
+  padding: 0;
+}
+
+/* Afstand mellem menupunkter */
+.menu li {
+  margin-right: 20px;
+}
+/* Fjerner margin på sidste punkt */
+.menu li:last-child {
+  margin-right: 0;
+}
+
+/* Styling af links i menuen */
+.menu a {
+  font-family: var(--font-h1-var1);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  display: block;
+  padding: 10px;
+  color: var(--red-primary);
+  text-decoration: none;
+  transition: color 0.3s; /* Blød hover-effekt */
+  text-align: end;
+}
+/* Hover-effekt på menu-links */
+.menu a:hover {
+  color: var(--red-primary);
+  font-style: italic;
+}
+/* Burger-menu ikon */
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+/* Streger i burger-menu */
+.burger .line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--red-primary);
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;  /* Skjult på desktop */
+}
+
+.h1 {
+    font-family: var(--font-h1-var1);
+    color: var(--red-primary);
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.galleri {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem; 
+}
+.container {
+    position: relative;
+    text-align: center;
+    background-color: var(--white-primary);
+  padding: 10px;
+}
+
+
+.container :hover {
+    opacity: 0.8;
+
+}
+.category-image {
+    border-radius: 10px;
+}
+.productlist {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem; 
+}
+
+
+.card {
+    background-color: var(--white-primary);
+    padding: 5px;
+    position: relative;
+}
+.card :hover {
+    opacity: 50%;
+}
+.p{
+    font-family: var(--font-p-var1);
+    color: var(--black-primary);
+    font-size: 16px;
+}
+.p2 {
+    font-family: var(--font-p-var1);
+    color: rgb(189, 183, 183);
+font-size: 16px;
+}
+.procent {
+    font-family: var(--font-p-var1);
+    color: var(--black-primary);
+    font-size: 16px;
+    background-color: red; 
+    text-align: right;
+    padding: 2px 5px;
+    border-radius: 5px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}.soldout-overlay {
+    opacity: 50%;
+}
+.soldout {
+    font-family: var(--font-p-var1);
+    color: var(--black-primary);
+    font-size: 16px;
+    background-color: lightgrey; 
+    text-align: center;
+    padding: 2px 5px;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.product {
+    width: 90%;
+    height: auto;
+    display: block;
+}
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    background-color: #e6e2d7;
+    padding: 5px;
+    position: relative;
+      }
+.product-info {
+    padding: 10px; 
+    margin-top: 100px;
+}
+.add-to-cart {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--red-primary);
+    color: var(--white-primary);
+    border-radius: 20px;
+    margin-top: 10px;
+}
+.add-to-cart:hover {
+    background-color:#a2663c;
+    color: var(--white-primary);
+    font-style: italic;
+}
+
+ .close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: none;
+  text-decoration: none;
+  color: var(--black-primary);
+}
+/*---------------- MOBIL MENU ----------------*/
+@media screen and (max-width: 800px) {
+  /* Skjul almindelig menu */ 
+    .menu {
+    display: none;
+  }
+    /* Vis burger-menu */
+  .burger {
+    display: block;
+    background-color: transparent;
+    border: 0;
+  }
+   /* Animation: burger bliver til kryds */
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+ /* Dropdown-menu når nav er aktiv */
+  nav.active .menu {
+    display: block;
+    background-color: var(--bg-base);
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+
+/* Produktliste: to kolonner på små skærme, én kolonne på meget små */
+@media screen and (max-width: 800px) {
+  .productlist {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 0 0.5rem;
+  }
+
+  .card {
+    padding: 8px;
+  }
+
+  .product {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0;
+  }
+
+  .product-info {
+    margin-top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .productlist {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 0 0.4rem;
+  }
+
+  .card {
+    padding: 6px;
+  }
+
+  .product-info {
+    margin-top: 0.5rem;
+    padding: 6px 4px;
+  }
+}
+
+/* Responsiv: enkel kolonne for galleri og justering af billeder */
+@media screen and (max-width: 800px) {
+  .galleri {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 0 0.5rem;
+  }
+
+  .container {
+    padding: 8px;
+  }
+
+  .category-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+
+  main {
+    width: 100%;
+    padding: 0.5rem;
+  }
+}
+
+/* Product page */
+@media screen and (max-width: 800px) {
+  .product-container {
+    display: block !important;
+    padding: 10px !important;
+  }
+
+  .product {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 0.75rem 0 !important;
+  }
+
+  .product-info {
+    margin-top: 0 !important;
+    padding: 0 !important;
+  }
+}
 
 
