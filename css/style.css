@@ -170,13 +170,12 @@ font-size: 16px;
     right: 5px;
     top: 5px;
 }.soldout-overlay {
-    opacity: 50%;
+   
 }
 .soldout {
     font-family: var(--font-p-var1);
     color: var(--black-primary);
     font-size: 16px;
-    background-color: lightgrey; 
     text-align: center;
     padding: 2px 5px;
     border-radius: 5px;

@@ -10,7 +10,7 @@
 
 
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/general.css" /> <script src="productlist.js" defer></script>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -80,47 +80,70 @@
 
 
 <main> <h1 class="h1"> Accessories</h1>
-    <div class="productListContainer"></div>
-<section>
-    <div class="productlist">
+
+  <div class="filter">
+     <button>All</button>
+     <button>Unisex</button>
+     <button>Women</button>
+      <button>Men</button>
+
+  </div>
+ 
+    <div id="productListContainer">
+
+     <!--- <a href="product.html">
+        <article class="smallProductonSalesoldOut">
+          <img src="https://kea-alt-del.dk/t7/images/webp/640/1525.webp" alt="Product Image">
+          <h3>Blue T20 Indian Cricket Jersey</h3>
+          <p class="subtle">Tshirts - Nike</p>
+          <p class="price">DKK <span>1299</span>,-</p>
+          <div class="discounted">
+            <p>Now Dkk<span>974</span>,-</p>
+            <p><span>25</span>%</p>
+          </div>
+        </article>
+      </a>
+    </div> --->
+<section class="productlist">
+   
     <div class="card">
         
-        <a href="product.html"> <img src="images/accesories1.webp" alt="Accessories" class="card-image"></a> 
+        <a href="product.html"> <img src="https://kea-alt-del.dk/t7/images/webp/640/1532.webp" alt="Accessories" class="card-image"></a> 
         <p class="p"><strong>ØRERINGE BØJLEPERLE</strong></p>
         <p class="p2">Øreringe - ZARA</p>
-        <p class="p">DKK 129</p>
+        <p class="p">DKK 129 ,-</p>
         <a href="product.html" class="p">Se Mere</a>
     </div>
     
     <div class="card">
     
        
-         <a href="product.html"><img src="images/accesories2.webp" alt="Apparel" class="card-image"></a> 
+         <a href="product.html"><img src="https://kea-alt-del.dk/t7/images/webp/640/1525.webp" alt="Apparel" class="card-image"></a> 
         <p class="p"><strong>ØRERINGE </strong></p>
         <p class="p2">Øreringe - Pilgrim</p>
         <p class="p">Prev. DKK 600</p>
-        <p class="p">Now DKK 300</p>
+        <p class="p">Now DKK 300 ,-</p>
         <p class="procent">50% Off</p>
         <a href="product.html" class="p">Se Mere</a>
     </div>
 
         <div class="card">
        <div class="soldout-overlay">
-         <a href="product.html"><img src="images/accesories3.webp" alt="Footwear" class="card-image"></a> 
+         <a href="product.html"><img src="https://kea-alt-del.dk/t7/images/webp/640/1164.webp" alt="Footwear" class="card-image"></a> 
           <p class="p"><strong>HALSKÆDE </strong></p>
         <p class="p2">Halskæde - Pilgrim</p>
-        <p class="p">DKK 300</p>
+        <p class="p">DKK 300 ,-</p>
         <p class="soldout">SOLD OUT</p>
         <a href="product.html" class="p">Se Mere</a></div>
     </div>      
     <div class="card">
      
         <div class="soldout-overlay">
-         <a href="product.html">   <img src="images/accesories4.webp" alt="Free Items" class="card-image"></a> 
+         <a href="product.html">   <img src="https://kea-alt-del.dk/t7/images/webp/640/1165.webp" alt="Free Items" class="card-image"></a> 
           <p class="p"><strong>ØRERINGE </strong></p>
         <p class="p2">Øreringe - Pilgrim</p>
         <p class="p">Prev. DKK 600</p>
-        <p class="p">Now DKK 300</p>
+        <p class="p">Now DKK 300 ,-</p>
         <p class="procent">50% Off</p>
         <p class="soldout">SOLD OUT</p>
         <a href="product.html" class="p">Se Mere</a></div>
@@ -128,21 +151,21 @@
     <div class="card">
      
         <div class="soldout-overlay">
-         <a href="product.html">   <img src="images/accesories4.webp" alt="Free Items" class="card-image"></a> 
+         <a href="product.html">   <img src="https://kea-alt-del.dk/t7/images/webp/640/1532.webp" alt="Free Items" class="card-image"></a> 
           <p class="p"><strong>ØRERINGE </strong></p>
         <p class="p2">Øreringe - Pilgrim</p>
         <p class="p">Prev. DKK 600</p>
-        <p class="p">Now DKK 300</p>
+        <p class="p">Now DKK 300 ,-</p>
         <p class="procent">50% Off</p>
         <p class="soldout">SOLD OUT</p>
         <a href="product.html" class="p">Se Mere</a></div>
     </div>
     <div class="card">
        <div class="soldout-overlay">
-         <a href="product.html"><img src="images/accesories3.webp" alt="Footwear" class="card-image"></a> 
+         <a href="product.html"><img src="https://kea-alt-del.dk/t7/images/webp/640/1525.webp" alt="Footwear" class="card-image"></a> 
           <p class="p"><strong>HALSKÆDE </strong></p>
         <p class="p2">Halskæde - Pilgrim</p>
-        <p class="p">DKK 300</p>
+        <p class="p">DKK 300 ,-</p>
         <p class="soldout">SOLD OUT</p>
         <a href="product.html" class="p">Se Mere</a></div>
     </div>  
@@ -150,27 +173,29 @@
      <div class="card">
     
        
-         <a href="product.html"><img src="images/accesories2.webp" alt="Apparel" class="card-image"></a> 
+         <a href="product.html"><img src="https://kea-alt-del.dk/t7/images/webp/640/1164.webp" alt="Apparel" class="card-image"></a> 
         <p class="p"><strong>ØRERINGE </strong></p>
         <p class="p2">Øreringe - Pilgrim</p>
         <p class="p">Prev. DKK 600</p>
-        <p class="p">Now DKK 300</p>
+        <p class="p">Now DKK 300 ,-</p>
         <p class="procent">50% Off</p>
         <a href="product.html" class="p">Se Mere</a>
     </div>
     <div class="card">
         
-        <a href="product.html"> <img src="images/accesories1.webp" alt="Accessories" class="card-image"></a> 
+        <a href="product.html"> <img src="https://kea-alt-del.dk/t7/images/webp/640/1165.webp" alt="Accessories" class="card-image"></a> 
         <p class="p"><strong>ØRERINGE BØJLEPERLE</strong></p>
         <p class="p2">Øreringe - ZARA</p>
-        <p class="p">DKK 129</p>
+        <p class="p">DKK 129 ,-</p>
         <a href="product.html" class="p">Se Mere</a>
     </div>
-    
-</div>
 
-</section></main>
+    
+  </section>
+
+</main>
 <footer>    </footer>
-  <script src="burger.js"></script><script src="productlist.js"></script>
+  <script src="burger.js"></script>
+ 
 </body>
 </html>
