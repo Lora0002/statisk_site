@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Lag_1" data-name="Lag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 197.03 39.49">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        font-family: PlayfairDisplay-Bold, 'Playfair Display';
+        font-size: 36px;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g class="cls-1">
+    <text class="cls-2" transform="translate(0 30.74)"><tspan class="cls-5" x="0" y="0">F</tspan><tspan class="cls-3" x="20.7" y="0">ashion</tspan><tspan class="cls-6" x="131.65" y="0">R</tspan><tspan class="cls-4" x="156.45" y="0">U</tspan><tspan x="180.39" y="0">s</tspan></text>
+  </g>
+</svg>

@@ -197,8 +197,6 @@ font-size: 16px;
     position: absolute;
     right: 5px;
     top: 5px;
-}.soldout-overlay {
-   
 }
 .soldout {
     font-family: var(--font-p-var1);
