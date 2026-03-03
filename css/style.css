@@ -106,6 +106,34 @@ nav {
   display: none;  /* Skjult på desktop */
 }
 
+/* filter knapper på produktliste-siden */
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.filter button {
+  padding: 8px 16px;
+  background-color: var(--white-primary);
+  border: 1px solid var(--grey-primary);
+  border-radius: 4px;
+  font-family: var(--font-p-var1);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.filter button:hover {
+  background-color: var(--bg-base);
+}
+
+.filter button.active {
+  background-color: var(--red-primary);
+  color: var(--white-primary);
+  border-color: var(--red-primary);
+}
+
 .h1 {
     font-family: var(--font-h1-var1);
     color: var(--red-primary);
